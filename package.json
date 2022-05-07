@@ -1,0 +1,36 @@
+{
+    "name": "@inventas/laravel-core-ui",
+    "version": "0.0.1",
+    "description": "My personal shared user interfaces",
+    "main": "resources/js/index.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/LambdaDigamma/laravel-core-ui.git",
+        "directory": "resources/js"
+    },
+    "peerDependencies": {
+        "vue": "^3.0.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.11.6",
+        "@babel/plugin-proposal-optional-chaining": "^7.11.0",
+        "@babel/plugin-transform-runtime": "^7.11.5",
+        "@babel/preset-env": "^7.11.5",
+        "@babel/preset-react": "^7.10.4",
+        "@babel/preset-typescript": "^7.10.4",
+        "@babel/runtime": "^7.11.2",
+        "@rollup/plugin-babel": "^5.2.1",
+        "@rollup/plugin-commonjs": "^15.1.0",
+        "@rollup/plugin-json": "^4.1.0",
+        "@rollup/plugin-node-resolve": "^9.0.0",
+        "@vue/compiler-sfc": "^3.0.2",
+        "rollup": "^2.29.0",
+        "rollup-plugin-vue": "^6.0.0-beta.10"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/LambdaDigamma/laravel-core-ui/issues"
+    },
+    "homepage": "https://github.com/LambdaDigamma/laravel-core-ui#readme"
+}

@@ -1,17 +1,17 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "inventas/laravel-core-ui",
+    "description": "My personal shared user interfaces",
     "keywords": [
-        ":vendor_name",
+        "Inventas",
         "laravel",
-        ":package_slug"
+        "laravel-core-ui"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/inventas/laravel-core-ui",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Lennart Fischer",
+            "email": "github@lambdadigamma.com",
             "role": "Developer"
         }
     ],
@@ -34,13 +34,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Inventas\\LaravelCoreUi\\": "src",
+            "Inventas\\LaravelCoreUi\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Inventas\\LaravelCoreUi\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -49,18 +49,31 @@
         "test-coverage": "vendor/bin/pest --coverage"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Inventas\\LaravelCoreUi\\LaravelCoreUiServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "LaravelCoreUi": "Inventas\\LaravelCoreUi\\Facades\\LaravelCoreUi"
             }
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "repositories": {
+        "local": {
+            "type": "path",
+            "url": "../laravel-core-ui",
+            "options": {
+                "symlink": true
+            }
+        }
+    }
 }
