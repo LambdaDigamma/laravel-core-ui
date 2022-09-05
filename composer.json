@@ -66,14 +66,5 @@
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true,
-    "repositories": {
-        "local": {
-            "type": "path",
-            "url": "../laravel-core-ui",
-            "options": {
-                "symlink": true
-            }
-        }
-    }
+    "prefer-stable": true
 }

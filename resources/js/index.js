@@ -5,11 +5,25 @@ import BackButtonComponent from "./Navigation/Breadcrumb/BackButton.vue";
 import { useSaveShortcut as useSaveShortcutAction, useSwitchLanguageShortcut as useSwitchLanguageShortcutAction } from "./Mixins/UseShortcuts.js";
 
 // ------------------------------------
+// Accessories
+// ------------------------------------
+import MetaInfoComponent from "./Accessories/MetaInfo.vue";
+import SectionBorderComponent from "./Accessories/SectionBorder.vue";
+import DragHandleComponent from "./Accessories/DragHandle.vue";
+
+export const SectionBorder = SectionBorderComponent;
+export const Badge = BadgeComponent;
+export const DeleteButtonHandle = DeleteButtonHandleComponent;
+export const StatItemWithIcon = StatItemWithIconComponent;
+export const MetaInfo = MetaInfoComponent;
+export const DragHandle = DragHandleComponent;
+
+// ------------------------------------
 // Navigation
 // ------------------------------------
 
-import PaginationButtonGroupComponent from "@/Navigation/PaginationButtonGroup.vue";
-import PageButtonFooterComponent from "@/Navigation/PageButtonFooter.vue";
+import PaginationButtonGroupComponent from "./Navigation/PaginationButtonGroup.vue";
+import PageButtonFooterComponent from "./Navigation/PageButtonFooter.vue";
 
 export const PaginationButtonGroup = PaginationButtonGroupComponent;
 export const PageButtonFooter = PageButtonFooterComponent;
@@ -27,18 +41,9 @@ import TextInputComponent from './Input/TextInput.vue';
 
 import DangerModalComponent from './Modals/DangerModal.vue';
 
-export const Accessories = {
-    Badge: BadgeComponent,
-    DeleteButtonHandle: DeleteButtonHandleComponent,
-    StatItemWithIcon: StatItemWithIconComponent,
-}
-
 export const SelectInput = SelectInputComponent;
 export const TextInput = TextInputComponent;
 
-export const StatItemWithIcon = StatItemWithIconComponent;
-export const Badge = BadgeComponent;
-export const DeleteButtonHandle = DeleteButtonHandleComponent;
 export const BackButton = BackButtonComponent;
 
 export const useSaveShortcut = useSaveShortcutAction;
