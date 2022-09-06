@@ -51,7 +51,7 @@
 </template>
 <script>
 import { usePaginator } from "momentum-paginator";
-import { defineComponent } from "vue";
+import {computed, defineComponent, reactive, ref, watch} from "vue";
 import { InertiaLink } from "@inertiajs/inertia-vue3";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/vue/solid";
 
@@ -69,9 +69,26 @@ export default defineComponent({
         },
     },
     setup(props) {
-        const { from, to, total, previous, next, pages } = usePaginator(
-            props.resource
-        );
+
+        const resource = reactive(props.resource);
+        let paginator = usePaginator(resource);
+        const from = ref(paginator.from);
+        const to = ref(paginator.to);
+        const total = ref(paginator.total);
+        const previous = ref(paginator.previous);
+        const next = ref(paginator.next);
+        const pages = ref(paginator.pages);
+
+        watch(() => props.resource, (newResource) => {
+            paginator = usePaginator(newResource);
+            from.value = paginator.from;
+            to.value = paginator.to;
+            total.value = paginator.total;
+            previous.value = paginator.previous;
+            next.value = paginator.next;
+            pages.value = paginator.pages;
+        });
+
         return {
             from,
             to,
