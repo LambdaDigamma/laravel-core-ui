@@ -1,19 +1,20 @@
-import BackButton from "@/Navigation/Breadcrumb/BackButton.vue";
+import BackButton from '@/Navigation/Breadcrumb/BackButton.vue';
 
 export default {
-    component: BackButton,
-    parameters: {
-        layout: "centered",
-    },
+  component: BackButton,
+  parameters: {
+    layout: 'centered',
+  },
 };
 
-const Template = (args) => ({
+export const Default = {
+  render: (args) => ({
     components: { BackButton },
     setup() {
-        return { args };
+      return { args };
     },
     template: '<BackButton v-bind="args">Hallo</BackButton>',
-});
+  }),
 
-export const Default = Template.bind({});
-Default.args = {};
+  args: {},
+};

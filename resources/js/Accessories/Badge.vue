@@ -10,6 +10,7 @@
             'bg-indigo-100 text-indigo-800': color === 'indigo',
             'bg-purple-100 text-purple-800': color === 'purple',
             'bg-pink-100 text-pink-800': color === 'pink',
+            'bg-orange-100 text-orange-800': color === 'orange',
             'px-2.5 text-xs': size === 'sm' && !remove,
             'px-3 text-sm': size === 'lg' && !remove,
             'pl-2 pr-0.5 text-xs': size === 'sm' && remove,
@@ -30,6 +31,7 @@
                 'text-green-400': color === 'green',
                 'text-blue-400': color === 'blue',
                 'text-indigo-400': color === 'indigo',
+                'text-orange-400': color === 'orange',
                 '-ml-0.5 mr-1.5': size === 'sm',
                 '-ml-1 mr-1.5': size === 'lg',
             }"
@@ -58,6 +60,8 @@
                     color === 'blue',
                 'text-indigo-400 hover:bg-indigo-200 hover:text-indigo-500 focus:bg-indigo-500 focus:text-white':
                     color === 'indigo',
+                'text-orange-400 hover:bg-orange-200 hover:text-orange-500 focus:bg-orange-500 focus:text-white':
+                    color === 'orange',
             }"
             @click.prevent.stop="$emit('remove')"
         >
@@ -82,7 +86,7 @@ export default {
     name: "Badge",
     props: {
         text: {
-            type: String,
+            type: [String, Number],
             default: null,
         },
         color: {
@@ -96,6 +100,7 @@ export default {
                         "green",
                         "blue",
                         "indigo",
+                        "orange",
                     ].indexOf(value) !== -1
                 );
             },

@@ -1,47 +1,90 @@
-import Toggle from "@/Controls/Toggle.vue";
-import { ref } from "vue";
+import Toggle from '@/Controls/Toggle.vue';
+import { ref } from 'vue';
 
 export default {
-    component: Toggle,
-    parameters: {
-        layout: "centered",
+  component: Toggle,
+  parameters: {
+    layout: 'centered',
+  },
+  argTypes: {
+    mode: {
+      control: { type: 'select' },
+      options: ['default', 'short'],
     },
-    argTypes: {
-        mode: {
-            control: { type: "select" },
-            options: ["default", "short"],
-        },
-    },
+  },
 };
 
-const Template = (args) => ({
+export const Default = {
+  render: (args) => ({
     components: { Toggle },
     setup() {
-        const enabled = ref(false);
+      const enabled = ref(false);
 
-        return { args, enabled };
+      return { args, enabled };
     },
     template: `
-        <Toggle v-bind="args" v-model="enabled" />
-        <div class="text-gray-900 mt-2 text-center">{{ enabled }}</div>
-    `,
-});
+            <Toggle v-bind="args" v-model="enabled" />
+            <div class="text-gray-900 mt-2 text-center">{{ enabled }}</div>
+        `,
+  }),
 
-export const Default = Template.bind({});
-Default.args = {};
-
-export const DefaultDisabled = Template.bind({});
-DefaultDisabled.args = {
-    disabled: true,
+  args: {},
 };
 
-export const Short = Template.bind({});
-Short.args = {
-    mode: "short",
+export const DefaultDisabled = {
+  render: (args) => ({
+    components: { Toggle },
+    setup() {
+      const enabled = ref(false);
+
+      return { args, enabled };
+    },
+    template: `
+            <Toggle v-bind="args" v-model="enabled" />
+            <div class="text-gray-900 mt-2 text-center">{{ enabled }}</div>
+        `,
+  }),
+
+  args: {
+    disabled: true,
+  },
 };
 
-export const ShortDisabled = Template.bind({});
-ShortDisabled.args = {
-    mode: "short",
+export const Short = {
+  render: (args) => ({
+    components: { Toggle },
+    setup() {
+      const enabled = ref(false);
+
+      return { args, enabled };
+    },
+    template: `
+            <Toggle v-bind="args" v-model="enabled" />
+            <div class="text-gray-900 mt-2 text-center">{{ enabled }}</div>
+        `,
+  }),
+
+  args: {
+    mode: 'short',
+  },
+};
+
+export const ShortDisabled = {
+  render: (args) => ({
+    components: { Toggle },
+    setup() {
+      const enabled = ref(false);
+
+      return { args, enabled };
+    },
+    template: `
+            <Toggle v-bind="args" v-model="enabled" />
+            <div class="text-gray-900 mt-2 text-center">{{ enabled }}</div>
+        `,
+  }),
+
+  args: {
+    mode: 'short',
     disabled: true,
+  },
 };

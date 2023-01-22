@@ -1,32 +1,42 @@
-import DeleteButtonHandle from "@/Accessories/DeleteButtonHandle.vue";
+import DeleteButtonHandle from '@/Accessories/DeleteButtonHandle.vue';
 
 export default {
-    component: DeleteButtonHandle,
-    parameters: {
-        layout: "centered",
+  component: DeleteButtonHandle,
+  parameters: {
+    layout: 'centered',
+  },
+  argTypes: {
+    side: {
+      control: { type: 'select' },
+      options: ['leading', 'trailing'],
     },
-    argTypes: {
-        side: {
-            control: { type: "select" },
-            options: ["leading", "trailing"],
-        },
-    },
+  },
 };
 
-const Template = (args) => ({
+export const Leading = {
+  render: (args) => ({
     components: { DeleteButtonHandle },
     setup() {
-        return { args };
+      return { args };
     },
     template: '<DeleteButtonHandle v-bind="args" />',
-});
+  }),
 
-export const Leading = Template.bind({});
-Leading.args = {
-    side: "leading",
+  args: {
+    side: 'leading',
+  },
 };
 
-export const Trailing = Template.bind({});
-Trailing.args = {
-    side: "trailing",
+export const Trailing = {
+  render: (args) => ({
+    components: { DeleteButtonHandle },
+    setup() {
+      return { args };
+    },
+    template: '<DeleteButtonHandle v-bind="args" />',
+  }),
+
+  args: {
+    side: 'trailing',
+  },
 };

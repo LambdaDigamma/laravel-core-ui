@@ -1,48 +1,103 @@
-import TextareaInput from "@/Input/TextareaInput.vue";
+import TextareaInput from '@/Input/TextareaInput.vue';
 
 export default {
-    component: TextareaInput,
-    argTypes: {},
+  component: TextareaInput,
+  argTypes: {},
 };
 
-const Template = (args) => ({
+export const Default = {
+  render: (args) => ({
     components: { TextareaInput },
     setup() {
-        return { args };
+      return { args };
     },
     template: '<TextareaInput v-bind="args"></TextareaInput>',
-});
+  }),
 
-export const Default = Template.bind({});
-Default.args = {};
-
-export const Placeholder = Template.bind({});
-Placeholder.args = {
-    placeholder: "Enter a bio",
+  args: {},
 };
 
-export const Error = Template.bind({});
-Error.args = {
-    errors: ["You need to enter something."],
+export const Placeholder = {
+  render: (args) => ({
+    components: { TextareaInput },
+    setup() {
+      return { args };
+    },
+    template: '<TextareaInput v-bind="args"></TextareaInput>',
+  }),
+
+  args: {
+    placeholder: 'Enter a bio',
+  },
 };
 
-export const Longer = Template.bind({});
-Longer.args = {
-    placeholder: "Enter a bio",
+export const Error = {
+  render: (args) => ({
+    components: { TextareaInput },
+    setup() {
+      return { args };
+    },
+    template: '<TextareaInput v-bind="args"></TextareaInput>',
+  }),
+
+  args: {
+    errors: ['You need to enter something.'],
+  },
+};
+
+export const Longer = {
+  render: (args) => ({
+    components: { TextareaInput },
+    setup() {
+      return { args };
+    },
+    template: '<TextareaInput v-bind="args"></TextareaInput>',
+  }),
+
+  args: {
+    placeholder: 'Enter a bio',
     rows: 10,
+  },
 };
 
-export const WithLabel = Template.bind({});
-WithLabel.args = {
-    label: "Message",
+export const WithLabel = {
+  render: (args) => ({
+    components: { TextareaInput },
+    setup() {
+      return { args };
+    },
+    template: '<TextareaInput v-bind="args"></TextareaInput>',
+  }),
+
+  args: {
+    label: 'Message',
+  },
 };
 
-export const WithHint = Template.bind({});
-WithHint.args = {
-    hint: "Please keep it short.",
+export const WithHint = {
+  render: (args) => ({
+    components: { TextareaInput },
+    setup() {
+      return { args };
+    },
+    template: '<TextareaInput v-bind="args"></TextareaInput>',
+  }),
+
+  args: {
+    hint: 'Please keep it short.',
+  },
 };
 
-export const Optional = Template.bind({});
-Optional.args = {
+export const Optional = {
+  render: (args) => ({
+    components: { TextareaInput },
+    setup() {
+      return { args };
+    },
+    template: '<TextareaInput v-bind="args"></TextareaInput>',
+  }),
+
+  args: {
     isOptional: true,
+  },
 };

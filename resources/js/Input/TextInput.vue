@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div :class="containerClass">
         <div
             class="flex"
             :class="{
@@ -10,11 +10,14 @@
         >
             <label
                 :for="id"
-                class="block text-sm font-medium leading-5 text-gray-700"
-                >{{ label }}</label
+                class="block text-sm font-medium leading-5 text-gray-700 dark:text-dark-300"
             >
+                {{ label }}
+            </label>
             <span class="text-sm leading-5 text-gray-500" v-if="isOptional"
-                >Optional</span
+                >
+                Optional
+            </span
             >
         </div>
         <div
@@ -31,10 +34,10 @@
                 :class="{
                     'border-red-300 text-red-900 placeholder-red-300 focus:border-red-300 focus:ring-red':
                         this.hasError,
-                    'border-gray-200 focus:ring-tf-blue': !this.hasError,
+                    'border-gray-200 focus:ring-tf-blue dark:focus:ring-emerald-700': !this.hasError,
                     'opacity-50': disabled,
                 }"
-                class="block w-full pr-10 placeholder-gray-400 border rounded-md form-input sm:text-sm sm:leading-5"
+                class="block w-full pr-10 placeholder-gray-400 border rounded-md form-input sm:text-sm sm:leading-5 dark:bg-dark-700 dark:border-dark-600 dark:placeholder-dark-500 dark:selection:bg-emerald-300 dark:selection:bg-opacity-40"
                 @input="$emit('update:modelValue', $event.target.value)"
                 @keydown.enter.prevent=""
                 ref="input"
@@ -97,6 +100,10 @@ export default {
         hint: {
             type: String,
             default: null,
+        },
+        containerClass: {
+            type: String,
+            default: "",
         },
     },
     methods: {

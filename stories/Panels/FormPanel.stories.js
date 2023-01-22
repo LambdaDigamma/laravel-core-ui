@@ -1,22 +1,23 @@
-import FormPanel from "@/Panels/FormPanel.vue";
+import FormPanel from '@/Panels/FormPanel.vue';
 
 export default {
-    component: FormPanel,
-    parameters: {
-        backgrounds: {
-            default: "gray-100",
-        },
+  component: FormPanel,
+  parameters: {
+    backgrounds: {
+      default: 'gray-100',
     },
-    argTypes: {},
+  },
+  argTypes: {},
 };
 
-const Template = (args) => ({
+export const Default = {
+  render: (args) => ({
     components: { FormPanel },
     setup() {
-        return { args };
+      return { args };
     },
     template: '<FormPanel v-bind="args" />',
-});
+  }),
 
-export const Default = Template.bind({});
-Default.args = {};
+  args: {},
+};

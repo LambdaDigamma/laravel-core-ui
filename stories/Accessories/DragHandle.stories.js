@@ -1,30 +1,40 @@
-import DragHandle from "@/Accessories/DragHandle.vue";
+import DragHandle from '@/Accessories/DragHandle.vue';
 
 export default {
-    component: DragHandle,
-    parameters: {
-        layout: "centered",
+  component: DragHandle,
+  parameters: {
+    layout: 'centered',
+  },
+  argTypes: {
+    side: {
+      control: { type: 'select' },
+      options: ['leading', 'trailing'],
     },
-    argTypes: {
-        side: {
-            control: { type: "select" },
-            options: ["leading", "trailing"],
-        },
-    },
+  },
 };
 
-const Template = (args) => ({
+export const Leading = {
+  render: (args) => ({
     components: { DragHandle },
     setup() {
-        return { args };
+      return { args };
     },
     template: '<DragHandle v-bind="args" />',
-});
+  }),
 
-export const Leading = Template.bind({});
-Leading.args = {};
+  args: {},
+};
 
-export const Trailing = Template.bind({});
-Trailing.args = {
-    side: "trailing",
+export const Trailing = {
+  render: (args) => ({
+    components: { DragHandle },
+    setup() {
+      return { args };
+    },
+    template: '<DragHandle v-bind="args" />',
+  }),
+
+  args: {
+    side: 'trailing',
+  },
 };

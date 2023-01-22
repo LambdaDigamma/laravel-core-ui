@@ -1,7 +1,7 @@
 <template>
     <div
         :aria-disabled="disabled ? true : undefined"
-        class="relative px-4 pt-5 overflow-hidden bg-white rounded-lg shadow sm:pt-6 sm:px-6"
+        class="relative px-4 pt-5 overflow-hidden bg-white rounded-lg shadow sm:pt-6 sm:px-6 dark:bg-dark-800 dark:border dark:border-dark-700"
         :class="{ 'pb-12': !removeLink, 'pb-6': removeLink }"
     >
         <dt :class="{ 'opacity-40': disabled }">
@@ -9,14 +9,14 @@
                 class="absolute p-3 rounded-md"
                 :class="{
                     'bg-sky-700': variant === 'blue',
-                    'bg-red-600': variant === 'red',
+                    'bg-red-600 dark:bg-dark-600': variant === 'red',
                 }"
             >
                 <div class="w-6 h-6 text-white">
                     <slot name="icon"></slot>
                 </div>
             </div>
-            <p class="ml-16 text-sm font-medium text-gray-500 truncate">
+            <p class="ml-16 text-sm font-medium text-gray-500 truncate dark:text-dark-500">
                 {{ label }}
             </p>
         </dt>
@@ -24,7 +24,7 @@
             class="flex items-baseline ml-16"
             :class="{ 'opacity-40': disabled, 'sm:pb-7 pb-6': !removeLink }"
         >
-            <p class="text-2xl font-semibold text-gray-900">{{ value }}</p>
+            <p class="text-2xl font-semibold text-gray-900 dark:text-dark-300">{{ value }}</p>
             <p
                 v-if="changeType"
                 :class="[
@@ -56,13 +56,13 @@
                 :class="{
                     'bg-sky-700': invertedColors && variant === 'blue',
                     'bg-red-600': invertedColors && variant === 'red',
-                    'bg-gray-50': !invertedColors,
+                    'bg-gray-50 dark:bg-dark-700': !invertedColors,
                 }"
             >
                 <div class="text-sm">
                     <inertia-link
                         :href="href"
-                        class="font-medium"
+                        class="font-medium dark:text-dark-300 dark:hover:text-dark-200"
                         :class="{
                             'text-sky-100 hover:text-white':
                                 invertedColors && variant === 'blue',

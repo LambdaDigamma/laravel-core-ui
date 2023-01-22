@@ -1,7 +1,7 @@
 <template>
     <tr
         v-bind="$attrs"
-        class="bg-white"
+        class="bg-white dark:bg-dark-800"
         :class="{ 'cursor-pointer': href, 'hover:bg-gray-50': !disableHover }"
         @click="navigate"
     >

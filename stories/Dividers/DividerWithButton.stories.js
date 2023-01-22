@@ -1,32 +1,33 @@
-import DividerWithButton from "@/Dividers/DividerWithButton.vue";
-import { PlusSmIcon } from "@heroicons/vue/solid";
+import DividerWithButton from '@/Dividers/DividerWithButton.vue';
+import { PlusSmIcon } from '@heroicons/vue/solid';
 
 export default {
-    component: DividerWithButton,
-    parameters: {
-        layout: "centered",
-        backgrounds: {
-            default: "white",
-        },
+  component: DividerWithButton,
+  parameters: {
+    layout: 'centered',
+    backgrounds: {
+      default: 'white',
     },
-    argTypes: {},
+  },
+  argTypes: {},
 };
 
-const Template = (args) => ({
+export const Default = {
+  render: (args) => ({
     components: { DividerWithButton, PlusSmIcon },
     setup() {
-        return { args };
+      return { args };
     },
     template: `
-        <DividerWithButton v-bind="args" class="w-80">
-            <template #icon>
-                <PlusSmIcon />
-            </template>
-        </DividerWithButton>
-    `,
-});
+            <DividerWithButton v-bind="args" class="w-80">
+                <template #icon>
+                    <PlusSmIcon />
+                </template>
+            </DividerWithButton>
+        `,
+  }),
 
-export const Default = Template.bind({});
-Default.args = {
-    text: "Add story"
+  args: {
+    text: 'Add story',
+  },
 };

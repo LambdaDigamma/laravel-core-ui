@@ -1,23 +1,23 @@
-import Panel from "@/Panels/Panel.vue";
+import Panel from '@/Panels/Panel.vue';
 
 export default {
-    component: Panel,
-    parameters: {
-        backgrounds: {
-            default: "gray-100",
-        },
+  component: Panel,
+  parameters: {
+    backgrounds: {
+      default: 'gray-100',
     },
-    argTypes: {},
+  },
+  argTypes: {},
 };
 
-const Template = (args) => ({
+export const Default = {
+  render: (args) => ({
     components: { Panel },
     setup() {
-        return { args };
+      return { args };
     },
-    template:
-        '<Panel v-bind="args">Lorem ipsum, some placeholder content.</Panel>',
-});
+    template: '<Panel v-bind="args">Lorem ipsum, some placeholder content.</Panel>',
+  }),
 
-export const Default = Template.bind({});
-Default.args = {};
+  args: {},
+};

@@ -11,7 +11,7 @@
         </div>
         <div class="ml-3 text-sm" :class="{ 'opacity-50': disabled }">
             <label :for="name" class="font-medium text-gray-700">
-                <slot name="label"></slot>
+                <slot name="default"></slot>
             </label>
             <p :id="descriptionId" v-if="!inline" class="text-gray-500">
                 <slot name="description"></slot>
@@ -24,11 +24,11 @@
 </template>
 <script lang="ts">
 import { defineComponent, ref } from "vue";
-import Checkbox from "@/Controls/Checkbox.vue";
+import Checkbox from "./Checkbox.vue";
 
 export default defineComponent({
     name: "CheckboxContainer",
-    components: { Checkbox },
+    components: {Checkbox  },
     inheritAttrs: false,
     props: {
         name: {

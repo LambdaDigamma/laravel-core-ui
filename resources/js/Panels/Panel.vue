@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-white shadow" :class="{ 'rounded-lg': rounded }">
+    <div class="bg-white shadow dark:bg-dark-800" :class="{ 'rounded-lg': rounded }">
         <slot v-if="hasHeadingSlot" name="heading"></slot>
         <div v-if="!fluid" class="px-4 py-5 sm:p-6">
             <slot></slot>

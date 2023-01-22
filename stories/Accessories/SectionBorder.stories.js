@@ -1,22 +1,23 @@
-import SectionBorder from "@/Accessories/SectionBorder.vue";
+import SectionBorder from '@/Accessories/SectionBorder.vue';
 
 export default {
-    component: SectionBorder,
-    parameters: {
-        layout: "centered",
-        backgrounds: {
-            default: "white"
-        }
+  component: SectionBorder,
+  parameters: {
+    layout: 'centered',
+    backgrounds: {
+      default: 'white',
     },
+  },
 };
 
-const Template = (args) => ({
+export const Default = {
+  render: (args) => ({
     components: { SectionBorder },
     setup() {
-        return { args };
+      return { args };
     },
     template: '<SectionBorder class="w-60" v-bind="args" />',
-});
+  }),
 
-export const Default = Template.bind({});
-Default.args = {};
+  args: {},
+};

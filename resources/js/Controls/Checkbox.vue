@@ -15,6 +15,7 @@ import { defineComponent, ref, watchEffect } from "vue";
 
 export default defineComponent({
     name: "Checkbox",
+    inheritAttrs: false,
     props: {
         value: {
             type: Boolean,

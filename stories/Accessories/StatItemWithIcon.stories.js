@@ -1,86 +1,178 @@
-import StatItemWithIcon from "@/Accessories/StatItemWithIcon.vue";
-import { UserGroupIcon } from "@heroicons/vue/outline";
+import StatItemWithIcon from '@/Accessories/StatItemWithIcon.vue';
+import { UserGroupIcon } from '@heroicons/vue/outline';
 
 export default {
-    component: StatItemWithIcon,
-    argTypes: {
-        changeType: {
-            // defaultValue: null,
-            control: { type: "select" },
-            options: ["increase", "decrease"],
-        },
+  component: StatItemWithIcon,
+  argTypes: {
+    changeType: {
+      // defaultValue: null,
+      control: { type: 'select' },
+      options: ['increase', 'decrease'],
     },
-    parameters: {
-        layout: "centered",
-    },
+  },
+  parameters: {
+    layout: 'centered',
+  },
 };
 
-const Template = (args) => ({
+export const Default = {
+  render: (args) => ({
     components: { StatItemWithIcon, UserGroupIcon },
     setup() {
-        return { args };
+      return { args };
     },
     template: `
-        <StatItemWithIcon v-bind="args" class="w-80">
-            <template #icon><UserGroupIcon /></template>
-        </StatItemWithIcon>
-    `,
-});
+            <StatItemWithIcon v-bind="args" class="w-80">
+                <template #icon><UserGroupIcon /></template>
+            </StatItemWithIcon>
+        `,
+  }),
 
-export const Default = Template.bind({});
-Default.args = {
-    label: "Number of users",
-    value: "1,400",
+  args: {
+    label: 'Number of users',
+    value: '1,400',
+  },
 };
 
-export const DefaultDisabled = Template.bind({});
-DefaultDisabled.args = {
-    label: "Number of users",
-    value: "1,400",
+export const DefaultDisabled = {
+  render: (args) => ({
+    components: { StatItemWithIcon, UserGroupIcon },
+    setup() {
+      return { args };
+    },
+    template: `
+            <StatItemWithIcon v-bind="args" class="w-80">
+                <template #icon><UserGroupIcon /></template>
+            </StatItemWithIcon>
+        `,
+  }),
+
+  args: {
+    label: 'Number of users',
+    value: '1,400',
     disabled: true,
+  },
 };
 
-export const Red = Template.bind({});
-Red.args = {
-    label: "Number of users",
-    value: "1,400",
-    variant: "red",
+export const Red = {
+  render: (args) => ({
+    components: { StatItemWithIcon, UserGroupIcon },
+    setup() {
+      return { args };
+    },
+    template: `
+            <StatItemWithIcon v-bind="args" class="w-80">
+                <template #icon><UserGroupIcon /></template>
+            </StatItemWithIcon>
+        `,
+  }),
+
+  args: {
+    label: 'Number of users',
+    value: '1,400',
+    variant: 'red',
+  },
 };
 
-export const DefaultWithoutLink = Template.bind({});
-DefaultWithoutLink.args = {
-    label: "Number of users",
-    value: "1,400",
+export const DefaultWithoutLink = {
+  render: (args) => ({
+    components: { StatItemWithIcon, UserGroupIcon },
+    setup() {
+      return { args };
+    },
+    template: `
+            <StatItemWithIcon v-bind="args" class="w-80">
+                <template #icon><UserGroupIcon /></template>
+            </StatItemWithIcon>
+        `,
+  }),
+
+  args: {
+    label: 'Number of users',
+    value: '1,400',
     removeLink: true,
+  },
 };
 
-export const Inverted = Template.bind({});
-Inverted.args = {
-    label: "Number of users",
-    value: "1,400",
+export const Inverted = {
+  render: (args) => ({
+    components: { StatItemWithIcon, UserGroupIcon },
+    setup() {
+      return { args };
+    },
+    template: `
+            <StatItemWithIcon v-bind="args" class="w-80">
+                <template #icon><UserGroupIcon /></template>
+            </StatItemWithIcon>
+        `,
+  }),
+
+  args: {
+    label: 'Number of users',
+    value: '1,400',
     invertedColors: true,
+  },
 };
 
-export const InvertedDisabled = Template.bind({});
-InvertedDisabled.args = {
-    label: "Number of users",
-    value: "1,400",
+export const InvertedDisabled = {
+  render: (args) => ({
+    components: { StatItemWithIcon, UserGroupIcon },
+    setup() {
+      return { args };
+    },
+    template: `
+            <StatItemWithIcon v-bind="args" class="w-80">
+                <template #icon><UserGroupIcon /></template>
+            </StatItemWithIcon>
+        `,
+  }),
+
+  args: {
+    label: 'Number of users',
+    value: '1,400',
     invertedColors: true,
     disabled: true,
+  },
 };
 
-export const Increase = Template.bind({});
-Increase.args = {
-    label: "Number of users",
-    value: "1,420",
-    changeType: "increase",
-    change: "20",
+export const Increase = {
+  render: (args) => ({
+    components: { StatItemWithIcon, UserGroupIcon },
+    setup() {
+      return { args };
+    },
+    template: `
+            <StatItemWithIcon v-bind="args" class="w-80">
+                <template #icon><UserGroupIcon /></template>
+            </StatItemWithIcon>
+        `,
+  }),
+
+  args: {
+    label: 'Number of users',
+    value: '1,420',
+    changeType: 'increase',
+    change: '20',
+  },
 };
 
-export const Decrease = Template.bind({});
-Decrease.args = {
-    label: "Number of users",
-    value: "1,200",
-    changeType: "decrease",
-    change: "220",
+export const Decrease = {
+  render: (args) => ({
+    components: { StatItemWithIcon, UserGroupIcon },
+    setup() {
+      return { args };
+    },
+    template: `
+            <StatItemWithIcon v-bind="args" class="w-80">
+                <template #icon><UserGroupIcon /></template>
+            </StatItemWithIcon>
+        `,
+  }),
+
+  args: {
+    label: 'Number of users',
+    value: '1,200',
+    changeType: 'decrease',
+    change: '220',
+  },
 };

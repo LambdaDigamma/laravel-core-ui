@@ -18,7 +18,7 @@
         </div>
         <div class="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between space-x-2 lg:space-x-4">
             <div>
-                <p class="text-sm text-gray-700">
+                <p v-if="!paginationLabel" class="text-sm text-gray-700 dark:text-dark-300">
                     Zeigt
                     <span class="font-medium">{{ resource.from }}</span>
                     bis
@@ -26,6 +26,9 @@
                     von
                     <span class="font-medium">{{ resource.total }}</span>
                     Ergebnissen
+                </p>
+                <p v-else class="text-sm text-gray-700">
+                    {{ paginationLabel({ from: resource.from, to: resource.to, total: resource.total }) }}
                 </p>
             </div>
             <div>
@@ -44,6 +47,8 @@ export default {
     components: { PaginationButtonGroup, ChevronLeftIcon, ChevronRightIcon, InertiaLink },
     props: {
         resource: Object,
+        paginationLabel: Function,
+        required: false,
     },
 };
 </script>

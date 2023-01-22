@@ -1,24 +1,25 @@
-import SimpleStatItem from "@/Accessories/SimpleStatItem.vue";
+import SimpleStatItem from '@/Accessories/SimpleStatItem.vue';
 
 export default {
-    component: SimpleStatItem,
-    parameters: {
-        layout: "centered",
-    },
+  component: SimpleStatItem,
+  parameters: {
+    layout: 'centered',
+  },
 };
 
-const Template = (args) => ({
+export const Default = {
+  render: (args) => ({
     components: { SimpleStatItem },
     setup() {
-        return { args };
+      return { args };
     },
     template: `
-        <SimpleStatItem v-bind="args">
-            <template #label>Number of users</template>
-            <template #metric>1,402</template>
-        </SimpleStatItem>
-    `,
-});
+            <SimpleStatItem v-bind="args">
+                <template #label>Number of users</template>
+                <template #metric>1,402</template>
+            </SimpleStatItem>
+        `,
+  }),
 
-export const Default = Template.bind({});
-Default.args = {};
+  args: {},
+};

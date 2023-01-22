@@ -1,34 +1,38 @@
-import ActionPanel from "@/Panels/ActionPanel.vue";
+import ActionPanel from '@/Panels/ActionPanel.vue';
 
 export default {
-    component: ActionPanel,
-    parameters: {
-        backgrounds: {
-            default: "gray-100",
-        },
+  component: ActionPanel,
+  parameters: {
+    backgrounds: {
+      default: 'gray-100',
     },
-    argTypes: {},
+  },
+  argTypes: {},
 };
 
-const Template = (args) => ({
+export const Default = {
+  render: (args) => ({
     components: { ActionPanel },
     setup() {
-        return { args };
+      return { args };
     },
     template: '<ActionPanel v-bind="args" />',
-});
+  }),
 
-export const Default = Template.bind({});
-Default.args = {};
+  args: {},
+};
 
-export const Fluid = (args) => ({
+export const Fluid = {
+  render: (args) => ({
     components: { ActionPanel },
     setup() {
-        return { args };
+      return { args };
     },
     template:
-        '<ActionPanel v-bind="args"><div class="py-10 bg-gray-100 rounded-lg"></div></ActionPanel>',
-});
-Fluid.args = {
+      '<ActionPanel v-bind="args"><div class="py-10 bg-gray-100 rounded-lg"></div></ActionPanel>',
+  }),
+
+  args: {
     fluid: true,
+  },
 };

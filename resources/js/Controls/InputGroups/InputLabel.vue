@@ -1,6 +1,6 @@
 <template>
     <div class="flex justify-between space-x-2">
-        <label class="block text-sm font-medium text-gray-700" v-bind="$attrs">
+        <label class="block text-sm font-medium leading-5 text-gray-700" v-bind="$attrs">
             <span v-if="value">{{ value }}</span>
             <span v-else><slot></slot></span>
         </label>

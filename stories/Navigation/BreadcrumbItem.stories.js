@@ -1,21 +1,22 @@
-import BreadcrumbItem from "@/Navigation/Breadcrumb/BreadcrumbItem.vue";
+import BreadcrumbItem from '@/Navigation/Breadcrumb/BreadcrumbItem.vue';
 
 export default {
-    component: BreadcrumbItem,
-    parameters: {
-        layout: "centered",
-    },
+  component: BreadcrumbItem,
+  parameters: {
+    layout: 'centered',
+  },
 };
 
-const Template = (args) => ({
+export const Default = {
+  render: (args) => ({
     components: { BreadcrumbItem },
     setup() {
-        return { args };
+      return { args };
     },
     template: '<ol><BreadcrumbItem v-bind="args">Hallo</BreadcrumbItem></ol>',
-});
+  }),
 
-export const Default = Template.bind({});
-Default.args = {
+  args: {
     chevron: true,
+  },
 };
