@@ -4,7 +4,7 @@
         aria-label="Pagination"
     >
         <component
-            :is="previous.isActive ? 'inertia-link' : 'span'"
+            :is="previous.isActive ? 'link' : 'span'"
             :href="previous.url"
             class="relative inline-flex items-center rounded-l-md border border-gray-300 bg-white px-2 py-2 text-sm font-medium text-gray-500 dark:bg-dark-800 dark:border-dark-600 dark:text-dark-400"
             :class="{
@@ -18,7 +18,7 @@
         </component>
 
         <component
-            :is="page.isActive ? 'inertia-link' : 'span'"
+            :is="page.isActive ? 'link' : 'span'"
             v-for="page in pages"
             class="relative inline-flex items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 dark:bg-dark-800 dark:border-dark-600 dark:text-dark-400"
             :href="page.url"
@@ -35,7 +35,7 @@
         </component>
 
         <component
-            :is="next.isActive ? 'inertia-link' : 'span'"
+            :is="next.isActive ? 'link' : 'span'"
             :href="next.url"
             class="relative inline-flex items-center rounded-r-md border border-gray-300 bg-white px-2 py-2 text-sm font-medium text-gray-500 dark:bg-dark-800 dark:border-dark-600 dark:text-dark-400"
             :class="{
@@ -52,13 +52,13 @@
 <script>
 import { usePaginator } from "momentum-paginator";
 import {computed, defineComponent, reactive, ref, watch} from "vue";
-import { InertiaLink } from "@inertiajs/inertia-vue3";
+import { Link } from "@inertiajs/vue3";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/vue/solid";
 
 export default defineComponent({
     name: "PaginationButtonGroup",
     components: {
-        InertiaLink,
+        Link,
         ChevronLeftIcon,
         ChevronRightIcon,
     },

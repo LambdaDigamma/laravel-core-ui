@@ -1,20 +1,20 @@
 <template>
     <div class="w-full">
         <div class="flex flex-1 justify-between sm:hidden">
-            <InertiaLink
+            <Link
                 v-if="resource.prev_page_url"
                 :href="resource.prev_page_url"
                 class="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:text-gray-500"
             >
                 Vorherige
-            </InertiaLink>
-            <InertiaLink
+            </Link>
+            <Link
                 v-if="resource.next_page_url"
                 :href="resource.next_page_url"
                 class="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:text-gray-500"
             >
                 Nächste
-            </InertiaLink>
+            </Link>
         </div>
         <div class="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between space-x-2 lg:space-x-4">
             <div>
@@ -40,11 +40,11 @@
 <script>
 import PaginationButtonGroup from "./PaginationButtonGroup.vue";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/vue/solid";
-import { InertiaLink } from "@inertiajs/inertia-vue3";
+import { Link } from "@inertiajs/vue3";
 
 export default {
     name: "PageButtonFooter",
-    components: { PaginationButtonGroup, ChevronLeftIcon, ChevronRightIcon, InertiaLink },
+    components: { PaginationButtonGroup, ChevronLeftIcon, ChevronRightIcon, Link },
     props: {
         resource: Object,
         paginationLabel: Function,
