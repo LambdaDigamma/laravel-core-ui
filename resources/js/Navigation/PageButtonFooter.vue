@@ -27,7 +27,7 @@
                     <span class="font-medium">{{ resource.total }}</span>
                     Ergebnissen
                 </p>
-                <p v-else class="text-sm text-gray-700">
+                <p v-else class="text-sm text-gray-700 dark:text-dark-300">
                     {{ paginationLabel({ from: resource.from, to: resource.to, total: resource.total }) }}
                 </p>
             </div>

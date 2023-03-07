@@ -1,5 +1,5 @@
 <template>
-    <th class="px-6 py-3 bg-cool-gray-50 dark:bg-dark-700" v-bind="$attrs">
+    <th class="px-6 py-3 bg-cool-gray-50 dark:bg-dark-800" v-bind="$attrs">
         <div
             v-if="sortable === null"
             class="text-xs font-medium leading-4 tracking-wider text-left uppercase text-cool-gray-500 dark:text-dark-400"
