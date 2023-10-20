@@ -56,9 +56,21 @@ export const PageButtonFooter = PageButtonFooterComponent;
 
 import CardActionFooterComponent from "./Panels/CardActionFooter.vue";
 import SimpleCardHeadingComponent from "./Panels/SimpleCardHeading.vue";
+import PanelComponent from "./Panels/Panel.vue";
+import CardHeadingDescriptionActionComponent from "./Panels/CardHeadingDescriptionAction.vue";
 
 export const CardActionFooter = CardActionFooterComponent;
 export const SimpleCardHeading = SimpleCardHeadingComponent;
+export const Panel = PanelComponent;
+export const CardHeadingDescriptionAction = CardHeadingDescriptionActionComponent;
+
+// ------------------------------------
+// Toggles
+// ------------------------------------
+
+import ShortToggleComponent from "./Controls/Toggles/ShortToggle.vue";
+
+export const ShortToggle = ShortToggleComponent;
 
 // ------------------------------------
 // Table
@@ -68,13 +80,16 @@ import DataTableComponent from "./Table/DataTable.vue";
 import HeadingComponent from "./Table/Heading.vue";
 import RowComponent from "./Table/Row.vue";
 import CellComponent from "./Table/Cell.vue";
+import TableEmptyStateComponent from "./Table/TableEmptyState.vue";
 import SelectInputComponent from "./Input/SelectInput.vue";
 import TextInputComponent from "./Input/TextInput.vue";
 
 import DangerModalComponent from "./Modals/DangerModal.vue";
+import TextareaInputComponent from "./Input/TextareaInput.vue";
 
 export const SelectInput = SelectInputComponent;
 export const TextInput = TextInputComponent;
+export const TextareaInput = TextareaInputComponent;
 
 export const BackButton = BackButtonComponent;
 
@@ -85,5 +100,6 @@ export const DataTable = DataTableComponent;
 export const Heading = HeadingComponent;
 export const Row = RowComponent;
 export const Cell = CellComponent;
+export const TableEmptyState = TableEmptyStateComponent;
 
 export const DangerModal = DangerModalComponent;
