@@ -10,6 +10,8 @@
     </tr>
 </template>
 <script>
+import { router } from '@inertiajs/vue3'
+
 export default {
     name: "Row",
     props: {
@@ -27,7 +29,8 @@ export default {
     methods: {
         navigate() {
             if (this.href) {
-                this.$inertia.visit(this.href);
+                router.visit(this.href, { preserveScroll: true })
+                // this.$inertia.visit(this.href);
             }
         }
     }

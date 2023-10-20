@@ -9,6 +9,7 @@
             }"
         >
             <label
+                v-if="label"
                 :for="name"
                 class="block text-sm font-medium leading-5 text-gray-700"
             >
@@ -22,13 +23,11 @@
             <textarea
                 :id="name"
                 :rows="rows"
-                :value="value"
+                v-model="model"
                 :placeholder="placeholder"
                 :class="{ 'whitespace-pre': noWrap }"
-                v-bind="$attrs"
-                class="block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                class="block w-full border-gray-200 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                 ref="input"
-                @input="$emit('input', $event.target.value)"
             ></textarea>
             <div
                 class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none"
@@ -58,51 +57,43 @@
     </div>
 </template>
 
-<script>
-export default {
-    inheritAttrs: false,
-    props: {
-        // id: {
-        //     type: String,
-        //     default() {
-        //         return `textarea-input-${this._uid}`;
-        //     },
-        // },
-        name: String,
-        value: String,
-        label: String,
-        rows: {
-            type: Number,
-            default: 3,
-        },
-        placeholder: {
-            type: String,
-            default: "",
-        },
-        hint: {
-            type: String,
-            default: null,
-        },
-        isOptional: {
-            type: Boolean,
-            default: false,
-        },
-        errors: {
-            type: Array,
-            default: () => [],
-        },
-        noWrap: {
-            type: Boolean,
-            default: () => false,
-        },
-    },
-    methods: {
-        focus() {
-            this.$refs.input.focus();
-        },
-        select() {
-            this.$refs.input.select();
-        },
-    },
-};
+<script setup lang="ts">
+import {defineProps, defineOptions, ref, defineModel} from "vue";
+
+defineOptions({
+    inheritAttrs: false
+})
+
+defineEmits(["update:modelValue"])
+
+const model = defineModel<string>()
+
+const {
+    rows = 3,
+    placeholder = "",
+    hint = null,
+    isOptional = false,
+    errors = [],
+    noWrap = false,
+} = defineProps<{
+    name?: string,
+    label?: string,
+    rows?: number,
+    placeholder?: string,
+    hint?: string,
+    isOptional?: boolean,
+    errors?: string[],
+    noWrap?: boolean,
+}>()
+
+const input = ref<HTMLInputElement>();
+
+const focus = () => {
+    input.value.focus();
+}
+
+const select = () => {
+    input.value.select();
+}
+
 </script>

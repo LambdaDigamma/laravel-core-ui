@@ -40,9 +40,10 @@
         >
             <circle cx="4" cy="4" r="3" />
         </svg>
-        <span>
+        <span v-if="!$slots.default">
             {{ text }}
         </span>
+        <slot v-else name="default"></slot>
         <button
             v-if="remove"
             type="button"

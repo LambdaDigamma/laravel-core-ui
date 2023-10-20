@@ -20,13 +20,13 @@
         <component
             :is="page.isActive ? 'link' : 'span'"
             v-for="page in pages"
-            class="relative inline-flex items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 dark:bg-dark-800 dark:border-dark-600 dark:text-dark-400"
+            class="relative inline-flex items-center border px-4 py-2 text-sm font-medium text-gray-700"
             :href="page.url"
             :class="{
                 'z-10 border-blue-500 bg-blue-50 text-blue-600 dark:bg-emerald-700 dark:border-emerald-700 dark:text-dark-200':
                     page.isCurrent,
                 'border-gray-300 text-gray-500 hover:bg-gray-50': page.isActive,
-                'border-gray-300 text-gray-500':
+                'border-gray-300 text-gray-500 bg-white border-gray-300 hover:bg-gray-50 dark:bg-dark-800 dark:border-dark-600 dark:text-dark-400':
                     !page.isCurrent && page.isActive,
             }"
             preserve-scroll
