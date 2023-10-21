@@ -1,5 +1,5 @@
 import TabItem from '@/Navigation/TabItem.vue';
-import { CogIcon } from '@heroicons/vue/solid';
+import { CogIcon } from '@heroicons/vue/24/solid';
 
 export default {
   component: TabItem,

@@ -54,7 +54,7 @@
   },
   "homepage": "https://github.com/LambdaDigamma/laravel-core-ui#readme",
   "dependencies": {
-    "@heroicons/vue": "^1.0.6",
+    "@heroicons/vue": "^2.0.0",
     "@inertiajs/vue3": "^1.0.2",
     "@vitejs/plugin-vue": "^4.3.3",
     "lodash": "^4.17.21",

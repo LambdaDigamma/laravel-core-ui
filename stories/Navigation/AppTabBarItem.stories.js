@@ -1,5 +1,5 @@
 import AppTabBarItem from '@/Navigation/AppTabBarItem.vue';
-import { CogIcon } from '@heroicons/vue/solid';
+import { CogIcon } from '@heroicons/vue/24/solid';
 
 export default {
   component: AppTabBarItem,

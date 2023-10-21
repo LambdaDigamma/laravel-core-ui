@@ -53,7 +53,7 @@
 import { usePaginator } from "momentum-paginator";
 import {computed, defineComponent, reactive, ref, watch} from "vue";
 import { Link } from "@inertiajs/vue3";
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/vue/solid";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/vue/24/solid";
 
 export default defineComponent({
     name: "PaginationButtonGroup",

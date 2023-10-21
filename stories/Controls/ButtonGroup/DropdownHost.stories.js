@@ -5,7 +5,7 @@ import IconGroupButton from '@/Controls/ButtonGroup/IconGroupButton.vue';
 import DropdownItemGroup from '@/Controls/Dropdown/DropdownItemGroup.vue';
 import DropdownItem from '@/Controls/Dropdown/DropdownItem.vue';
 import DropdownHeader from '@/Controls/Dropdown/DropdownHeader.vue';
-import { ChevronDownIcon, TrashIcon } from '@heroicons/vue/solid';
+import { ChevronDownIcon, TrashIcon } from '@heroicons/vue/24/solid';
 import { ref } from 'vue';
 
 export default {

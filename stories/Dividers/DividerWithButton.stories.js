@@ -1,5 +1,5 @@
 import DividerWithButton from '@/Dividers/DividerWithButton.vue';
-import { PlusSmIcon } from '@heroicons/vue/solid';
+import { PlusSmallIcon } from '@heroicons/vue/24/solid';
 
 export default {
   component: DividerWithButton,
@@ -14,14 +14,14 @@ export default {
 
 export const Default = {
   render: (args) => ({
-    components: { DividerWithButton, PlusSmIcon },
+    components: { DividerWithButton, PlusSmallIcon },
     setup() {
       return { args };
     },
     template: `
             <DividerWithButton v-bind="args" class="w-80">
                 <template #icon>
-                    <PlusSmIcon />
+                    <PlusSmallIcon />
                 </template>
             </DividerWithButton>
         `,

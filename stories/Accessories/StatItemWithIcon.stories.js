@@ -1,5 +1,5 @@
 import StatItemWithIcon from '@/Accessories/StatItemWithIcon.vue';
-import { UserGroupIcon } from '@heroicons/vue/outline';
+import { UserGroupIcon } from '@heroicons/vue/24/outline';
 
 export default {
   component: StatItemWithIcon,

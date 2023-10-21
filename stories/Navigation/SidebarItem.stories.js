@@ -1,5 +1,5 @@
 import SidebarItem from '@/Navigation/SidebarItem.vue';
-import { CogIcon } from '@heroicons/vue/outline';
+import { CogIcon } from '@heroicons/vue/24/outline';
 
 export default {
   component: SidebarItem,

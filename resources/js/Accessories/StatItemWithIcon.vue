@@ -34,12 +34,12 @@
                     'ml-2 flex items-baseline text-sm font-semibold',
                 ]"
             >
-                <ArrowSmUpIcon
+                <ArrowSmallUpIcon
                     v-if="changeType === 'increase'"
                     class="self-center flex-shrink-0 w-5 h-5 text-green-500"
                     aria-hidden="true"
                 />
-                <ArrowSmDownIcon
+                <ArrowSmallDownIcon
                     v-else-if="changeType === 'decrease'"
                     class="self-center flex-shrink-0 w-5 h-5 text-red-500"
                     aria-hidden="true"
@@ -82,13 +82,13 @@
     </div>
 </template>
 <script>
-import { ArrowSmDownIcon, ArrowSmUpIcon } from "@heroicons/vue/solid";
+import { ArrowSmallDownIcon, ArrowSmallUpIcon } from "@heroicons/vue/24/solid";
 
 export default {
     name: "StatItemWithIcon",
     components: {
-        ArrowSmDownIcon,
-        ArrowSmUpIcon,
+        ArrowSmallDownIcon,
+        ArrowSmallUpIcon,
     },
     props: {
         label: {

@@ -1,7 +1,7 @@
 import DropdownHost from '@/Controls/ButtonGroup/DropdownHost.vue';
 import DropdownItem from '@/Controls/Dropdown/DropdownItem.vue';
 import { Menu } from '@headlessui/vue';
-import { TrashIcon } from '@heroicons/vue/solid';
+import { TrashIcon } from '@heroicons/vue/24/solid';
 
 export default {
   component: DropdownItem,
