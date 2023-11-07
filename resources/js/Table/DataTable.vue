@@ -12,7 +12,7 @@
             <tbody class="bg-white divide-y divide-cool-gray-200 dark:divide-dark-700">
                 <slot name="body"></slot>
             </tbody>
-            <tfoot class="dark:bg-dark-800">
+            <tfoot class="bg-gray-100 dark:bg-dark-800">
                 <tr>
                     <slot name="foot"></slot>
                 </tr>
